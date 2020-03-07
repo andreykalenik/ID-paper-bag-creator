@@ -4,6 +4,6 @@
 # Установка
 
 # Использование
-![screenshot of sample](01.PNG)
+![screenshot of sample](images/01.PNG)
 
 # Настройка
