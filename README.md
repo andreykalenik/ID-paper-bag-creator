@@ -3,7 +3,7 @@
 
 # Установка
 
-1. [Скачать][images/get-zip-1.png] архив с GitHub-a<br>
+1. [Скачать](images/get-zip-1.png) архив с GitHub-a<br>
       <br>
 2. Содержимое архива поместить по адресу: <br> C:\Users\user_name\AppData\Roaming\Adobe\InDesign\Version 15.0\ru_RU\Scripts\Scripts Panel
      > **user_name** — имя пользователя в ОС Windows.<br> 
