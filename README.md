@@ -9,9 +9,11 @@
      > **user_name** — имя пользователя в ОС Windows.<br> 
       **Version 15.0**  — версия InDesign CC2020 — 15, CC2019-14, CC2018-13 и тд.<br>
       **[ru_RU](images/install_ru.png)** - если InDesign на русском языке, **[en_US](images/install_en.png)** - англиском.<br>
-
+3. Перезапустить  InDesign.
 
 # Использование
+
+
 ![screenshot of sample](images/01.PNG)
 
 # Настройка
