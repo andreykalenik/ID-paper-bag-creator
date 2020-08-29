@@ -12,7 +12,9 @@ var square_bottom = false;              // true - отрисовка клапа�
 
 // дополнительные параметры, их нет в UI
 var bleed_size = 2;                         // мм
-var mark_color = [0,100,100,0];     //  CMYK  цвет меток 
+var mark_color = [40,40,40,100];     //  CMYK  цвет меток 
 var mark_thickness = 1;                 // points
 var mark_whidth = 2;                     // мм
+var path_PDF_folder = "~/Desktop";
+var name_PDF = "paper bag template " + width + "x" + height + "x" + deep;
 
