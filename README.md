@@ -1,5 +1,7 @@
 # ID-paper-bag-creator
 Скрипт для раскроя лайнера под бумажный пакет для  Adobe InDesign. <br> Скрипт расставляет метки реза и фальцовки на лайнере, пользавателю остаётся создать дизайн в InDesign или сохранить шаблон лайекра в формате PDF.
+![screenshot of sample](images/01.PNG)(images/02.PNG)(images/03.PNG)
+
 
 # Установка
 
@@ -14,7 +16,7 @@
 # Использование
 
 
-![screenshot of sample](images/01.PNG)
+
 
 # Настройка
 
