@@ -83,12 +83,14 @@ statictext_ui_alert_button.onClick = function () {
     }
 
 ui_bag_width.onChanging = ui_bag_height.onChanging = ui_bag_deep.onChanging =ui_bag_side_flap.onChanging = ui_bag_bottom.onChanging =ui_bag_top_flap.onChanging  = function () {
+    ui_bag_bottom.text = Math.ceil (Number (ui_bag_deep.text/2 + bottom_flap));
     var valid_ui_bag_width = /^[\d]+$/.test (ui_bag_width.text);
     var valid_ui_bag_height = /^[\d]+$/.test (ui_bag_height.text);
     var valid_ui_bag_deep = /^[\d]+$/.test (ui_bag_deep.text);
     var valid_ui_bag_side_flap = /^[\d]+$/.test (ui_bag_side_flap.text);
     var valid_ui_bag_bottom = /^[\d]+$/.test (ui_bag_bottom.text);
     var valid_ui_bag_top_flap =/^[\d]+$/.test (ui_bag_top_flap.text);
+    
     valid_ui_bag_width && valid_ui_bag_height && valid_ui_bag_deep && valid_ui_bag_side_flap && valid_ui_bag_bottom && valid_ui_bag_top_flap ? ui_text_area.visible = false :  ui_text_area.visible = true;
     statictext_ui_alert_button.enabled =ui_button_run.enabled=ui_button_PDF.enabled = valid_ui_bag_width && valid_ui_bag_height&& valid_ui_bag_deep && valid_ui_bag_side_flap && valid_ui_bag_bottom && valid_ui_bag_top_flap;
             if (ui_button_run.enabled == true){
@@ -99,11 +101,11 @@ ui_bag_width.onChanging = ui_bag_height.onChanging = ui_bag_deep.onChanging =ui_
                 
                
          }                   
-          
+ /*         
 ui_bag_deep.onChanging = function () {
     ui_bag_bottom.text = Math.ceil (Number (ui_bag_deep.text/2 + bottom_flap));
     }
-
+*/
  if (left_bind == true){
         ui_left_bind.value = true;
         } else {
@@ -127,6 +129,7 @@ ui_button_run.onClick = function () {
 }     
  ui_button_PDF.onClick = function () {
      key_create_PDF= true;
+     name_PDF = "paper bag template " + ui_bag_width.text + "x" + ui_bag_height.text + "x" + ui_bag_deep.text;
                 w.close ();
 }  
                                     // create_template (width, height, deep, side_flap, bottom, top_flap, left_bind)
@@ -254,6 +257,7 @@ myDoc.documentPreferences.documentBleedOutsideOrRightOffset = bleed_size + " mm"
 }
 
 function create_pdf (width, height, deep, path_PDF_folder, name_PDF){
+
      var saveFile =  new File(path_PDF_folder +"/"+name_PDF+".pdf");
      var myDocument = app.activeDocument;
        with(app.pdfExportPreferences){

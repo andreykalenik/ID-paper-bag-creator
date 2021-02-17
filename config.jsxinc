@@ -15,5 +15,5 @@ var mark_color = [40,40,40,100];     //  CMYK  цвет меток
 var mark_thickness = 1;                 // points
 var mark_whidth = 2;                     // мм
 var path_PDF_folder = "~/Desktop";
-var name_PDF = "paper bag template " + width + "x" + height + "x" + deep;
+
 
