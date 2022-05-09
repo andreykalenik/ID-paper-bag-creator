@@ -1,19 +1,18 @@
-﻿#targetengine "main"
-
-// дефолтные значения параметров в UI
+﻿// дефолтные значения параметров в UI
 var width = 230;                             // мм
 var height = 300;                            // мм
 var deep = 80;                                // мм
 var bottom_flap = 15;                      //  мм, от 10 до 15 мм
-var top_flap = 25;                           //  мм, от 20 до 25 мм
+var top_flap = 30;                           //  мм, от 20 до 25 мм
 var side_flap = 12;                          // мм , на 2 мм шире скотча
 var left_bind = true;                       // true - сбоорка по левому края, false - сборка по правому краю
 
 // дополнительные параметры, их нет в UI
 var bleed_size = 2;                         // мм
-var mark_color = [40,40,40,100];     //  CMYK  цвет меток 
+var mark_color = [5,5,5,50];     //  CMYK  цвет меток 
 var mark_thickness = 1;                 // points
 var mark_whidth = 2;                     // мм
 var path_PDF_folder = "~/Desktop";
-
-
+var name_PDF_type1 = "paper bag template " + width + "x" + height + "x" + deep;
+var name_PDF_type2 = "paper bag template front" + width + "x" + height + "x" + deep;
+var name_PDF_type3 = "paper bag template side" + width + "x" + height + "x" + deep;
