@@ -525,6 +525,9 @@ ui_right_bind.onClick= function(){
       left_bind = false;
             }  
  // валидация полей  и размеры
+ ui_bag_deep_type1.onChange= function(){
+     ui_bag_bottom_type1.text =+ui_bag_deep_type1.text /2 +bottom_flap;
+     }
  ui_bag_width_type1.onChanging = ui_bag_heigh_type1.onChanging = ui_bag_deep_type1.onChanging =ui_bag_side_flap_type1.onChanging = ui_bag_bottom_type1.onChanging =ui_bag_top_flap_type1.onChanging  = function () {
     var valid_ui_bag_width = /^[\d]+$/.test (ui_bag_width_type1.text);
     var valid_ui_bag_heigh = /^[\d]+$/.test (ui_bag_heigh_type1.text);
