@@ -2,6 +2,9 @@
 #targetengine "main"
 #include config.jsxinc
 
+
+const  version = '25.10'
+
 var work_key = 0;
 
 var work_bag_width = 0;
@@ -35,7 +38,7 @@ if (work_key == 4){
 function ui_window(){
 // DIALOG UI
 // ======
-var dialog = new Window("dialog","ID paper bag creator", undefined, {closeButton: false}); 
+var dialog = new Window("dialog","ID paper bag creator "+ version , undefined, {closeButton: false}); 
     dialog.orientation = "row"; 
     dialog.alignChildren = ["left","fill"]; 
     dialog.spacing = 10; 
@@ -524,8 +527,15 @@ ui_left_bind.onClick= function(){
 ui_right_bind.onClick= function(){
       left_bind = false;
             }  
- // валидация полей  и размеры
+ // валидация полей  и размеры ui_bag_deep_type1.onChange = 
+  ui_bag_deep_type1.onChanging  = function (){
+     ui_bag_bottom_type1.text = Number (ui_bag_deep_type1.text/2 + bottom_flap);
+     //ui_bag_side_flap_type1.text = ui_bag_deep_type1.text
+     }
+ 
  ui_bag_width_type1.onChanging = ui_bag_heigh_type1.onChanging = ui_bag_deep_type1.onChanging =ui_bag_side_flap_type1.onChanging = ui_bag_bottom_type1.onChanging =ui_bag_top_flap_type1.onChanging  = function () {
+    ui_bag_bottom_type1.text = Math.ceil (ui_bag_deep_type1.text/2 + bottom_flap); 
+    
     var valid_ui_bag_width = /^[\d]+$/.test (ui_bag_width_type1.text);
     var valid_ui_bag_heigh = /^[\d]+$/.test (ui_bag_heigh_type1.text);
     var valid_ui_bag_deep = /^[\d]+$/.test (ui_bag_deep_type1.text);
@@ -543,6 +553,8 @@ ui_right_bind.onClick= function(){
                     ui_sizes_group_type1.visible = false;
                     tab2.enabled = false;
                     }
+      
+       
       ui_alert_page_width_type2_main = (+ui_bag_width_type1.text );
       ui_alert_page_height_type2_main = ( +ui_bag_top_flap_type1.text + +ui_bag_heigh_type1.text + +ui_bag_bottom_type1.text);
       ui_alert_page_width_type2_saide = (+ui_bag_deep_type1.text + +ui_bag_side_flap_type1.text+ +ui_bag_side_flap_type1.text);
